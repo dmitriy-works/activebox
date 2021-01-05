@@ -8,14 +8,138 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+  display: inline-block;
+}
+
 body {
-   background-color: $cyan;
+  color: $text;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+  
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid #3b3e57;
+}
+
+.header_menu li {
+  font-family: 'Raleway', sans-serif;  
+  font-size: 13px;
+  font-weight: 600;
+  opacity: .75;
+  text-transform: uppercase;
+  transition: all .2s linear;  
+  &:hover {
+    opacity: 1;
+  }  
+}
+
+.header_menu li + li {
+  margin-left: 60px;   
+}
+
+.intro {
+  background-image: url('../images/01-bg.png');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.intro__inner {
+  color: #fff;
+  max-width: 970px;
+  margin: 0 auto;
+  padding-top: 255px;
+  text-align: center;
+}
+
+.intro__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 71px;
+  text-transform: uppercase;
+}
+
+.intro__subtitle {
+  font-size: 22px;
+  line-height: 33px;
+  padding: 40px 0 80px;
+}
+
+.btn {
+  font-size: 13px;
+  line-height: 21px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: $red;
+  padding: 12px 48px;
+  border-radius: 3px;
+  transition: all .2s linear;
+  &:hover {
+    background-color: #e03939;
+  }
+}
+
+.feature {
+  padding: 120px 0;
+}
+
+.feature__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature__item {
+  width: 33.33333%;
+  text-align: center;
+  padding-left: 85px;
+  padding-bottom: 75px;
+}
+
+.feature__title {
+  color: #2d3033;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 35px 0 25px;
+}
+
+.feature__text {
+  color: $text;
+  font-weight: 400;
 }
 
 
